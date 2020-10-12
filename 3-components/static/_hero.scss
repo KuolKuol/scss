@@ -1,0 +1,100 @@
+.hero {
+
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('/images/hero.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .hero__container {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .hero__title {
+            color: white;
+            text-transform: uppercase;
+        }
+    
+        .hero__text {
+            color: white;
+            line-height: 1.5em;
+        }
+    
+        .hero__button {
+    
+        }
+    }
+    
+    @include media($phone){
+
+        .hero__container {
+
+            min-height: 420px;
+            align-items: center;
+            text-align: center;
+
+            .hero__title {
+                font-size:1.8rem;
+            }
+        
+            .hero__text {
+                margin: 25px 0px;
+                line-height: 2rem;
+                font-size: 1rem;
+
+            }
+        
+            .hero__button {
+    
+            }
+        }    
+    }
+
+    @include media($tablet){
+
+        .hero__container {
+
+            min-height: 420px;
+            align-items: center;
+            text-align: center;
+
+            .hero__title {
+                font-size:2rem;
+            }
+        
+            .hero__text {
+                font-size:1.2rem;
+                margin: 25px 0px;
+            }
+        
+            .hero__button {
+    
+            }
+        }   
+    }
+
+    @include media($desktop){
+
+        .hero__container {
+
+            min-height: 520px;
+            align-items: flex-end;
+            text-align: right;
+
+            .hero__title {
+                font-size: 3.5rem;
+                // max-width: 48%;
+            }
+        
+            .hero__text {
+                font-size:1.5rem;
+                margin: 25px 0px;
+                max-width: 50%;
+            }
+        
+            .hero__button {
+    
+            }   
+        }
+    }
+}

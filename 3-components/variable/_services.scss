@@ -1,0 +1,113 @@
+.service-list {
+    .service__container {
+        padding-top:75px;
+        padding-bottom:60px;
+        .service {
+            margin-bottom:40px;
+            .service__image {
+                border-radius: 4px;
+            }
+            .service__section {
+                .service__title {
+                    margin-bottom: 15px;
+
+                }
+                .service__summary {
+                    line-height: 1.6em;
+
+                }
+                .service__link {
+                    display: block;
+                    margin-top:15px;
+                    color:blue;
+                    text-decoration: none;
+                }
+            }
+        }  
+    }   
+
+    @include media($phone){
+        .service__container {
+            .service {
+                
+                .service__image {
+                    margin-bottom:20px;
+                    width: 100%;
+                    max-height: 300px;
+                }
+                .service__section {
+                    .service__title {
+                        font-size: 1.5em;
+
+                    }
+                    .service__summary {
+        
+                    }
+                    .service__link {
+        
+                    }
+                }
+            }  
+        } 
+    }
+
+    @include media($tablet){
+        .service__container {
+            .service {
+                display: flex;
+                .service__image {
+                    display:block;
+                    padding-right:30px;
+                }
+
+                .service__section {
+                    .service__title {
+                        font-size: 1.8em;
+
+                    }
+                    .service__summary {
+
+                    }
+                    .service__link {
+        
+                    }
+                }
+            }  
+        } 
+    }
+
+    @include media($desktop){
+        .service__container {
+            
+            .service:nth-child(even){
+                flex-direction: row-reverse;
+            }
+
+            .service {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+       
+
+                .service__image {
+                    width: 20%;
+                    min-height: 250px;
+                }
+                .service__section {
+                    max-width: 75%;
+                    .service__title {
+                        font-size: 2em;
+
+                    }
+                    .service__summary {
+        
+                    }
+                    .service__link {
+        
+                    }
+                }
+            }  
+        } 
+    }
+}

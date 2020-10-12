@@ -1,0 +1,153 @@
+
+.header {
+    .header__container {
+            
+        .header__logo {
+            .header__logo__link {
+                .header__logo__image {
+                    
+                }
+            }
+        }
+
+        .header__group {
+            .header__section {
+                display: flex;
+                color:black;
+                text-decoration: none;
+                align-items: center;
+                .header__icon {
+                    font-size: 26px;
+                    padding: 11px;
+                    color: #14287b;
+                }
+                .header__info {
+
+                    .header__info__sub-title {
+                        font-weight: 500;
+                        font-size: 14px;
+                        padding-left: 2px;
+                    }
+                    .header__info__data {
+                        font-weight: 700;
+                        font-size: 16px;
+                        padding-top: 5px;
+                        a {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media($phone){
+            .header__logo {
+                display: flex;
+                justify-content: center;
+                .header__logo__link {
+                    padding:10px 0px;
+                    .header__logo__image {
+                        max-width: 100px;
+                    }
+                }
+            }
+        
+            .header__group {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom:10px;
+                .header__section {
+                    .header__icon {
+        
+                    }
+                    .header__info {
+                        .header__info__sub-title {
+        
+                        }
+                        .header__info__data {
+
+                        }
+                    }
+                }
+            }
+        }
+    
+        @include media($tablet){
+            .header__logo {
+                display: flex;
+                justify-content: center;
+                .header__logo__link {
+                    padding:10px 0px;
+                    .header__logo__image {
+                        max-width: 100px;
+                    }
+                }
+            }
+        
+            .header__group {
+                display: flex;
+                justify-content: center;
+                padding-bottom:10px;
+                .header__section {
+                    .header__icon {
+                        margin:0px 15px 0px 40px;
+                    }
+                    .header__info {
+                        .header__info__sub-title {
+        
+                        }
+                        .header__info__data {
+
+                        }
+                    }
+                }
+            }
+        }
+        
+        @include media($desktop){
+            display: flex;
+            min-height: 120px;
+            justify-content: space-between;
+            align-items: center;
+            .header__logo {
+                .header__logo__link {
+                    .header__logo__image {
+                        max-width: 80px;
+                    }
+                }
+            }
+        
+            .header__group {
+                display: flex;
+
+                & .header__section:first-child {
+                    margin-right: 20px;
+                }
+
+                .header__section {
+                    .header__icon {
+        
+                    }
+                    .header__info {
+                        .header__info__sub-title {
+        
+                        }
+                        .header__info__data {
+        
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.header__info__link,.footer__info__link {
+    text-decoration: none;
+}
+
+.header__info__link {
+    display: block;
+    margin-top: 4px;
+}

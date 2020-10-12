@@ -1,0 +1,103 @@
+.content {
+
+
+    .content__container {
+        
+        display: flex;
+        padding:75px 0px;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        
+        .content__image {
+            width: 450px;
+            height: 250px;
+            border-radius:4px;
+        }
+        .content__section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .content__heading {
+                margin-bottom:10px;
+            }
+            .content__paragraph {
+                line-height: 1.6em;
+                // max-width: 60%;
+            }
+        }
+    }
+
+    
+
+
+    @include media($phone){
+
+        .content__container {
+            flex-direction: column;
+            
+            .content__image {
+                margin-bottom:20px;
+                width: 100%;
+            }
+            .content__section {
+                .content__heading {
+                    font-size: 1.5em;
+                    max-width: 100%;
+                }
+                .content__paragraph {
+    
+                }
+            }
+        }
+
+    }
+
+    @include media($tablet){
+        .content__container {
+            flex-direction: column;
+            .content__image {
+                margin-bottom:20px;
+            }
+            .content__section {
+                .content__heading {
+                    font-size: 1.8em;
+                    max-width:100%;
+                }
+                .content__paragraph {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    @include media($desktop){
+        .content__container {
+
+            .content__image {
+    
+            }
+            .content__section {
+                max-width: 60%;
+                padding:0px 30px;
+
+                .content__heading {
+                    font-size: 2em;
+                }
+                .content__paragraph {
+                    // max-width: 80%;
+                }
+            }
+        }
+    }
+}
+
+#content--about {
+    .content__container {
+
+    }
+}
+
+.list--construction {
+    line-height: 1.6em;
+    margin-top: 10px;
+}

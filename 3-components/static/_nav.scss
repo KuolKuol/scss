@@ -1,0 +1,206 @@
+.nav {
+    background-color: whitesmoke;
+    .nav__list {
+        .nav__list__item {
+            .nav__list__link {
+                color: black;
+                text-decoration: none;
+            }
+        }
+    }
+
+    @include media($phone){
+        display: block;
+        .hamburger {
+            display: flex;
+            justify-content: center;
+            padding: 0px;
+            align-items: center;
+            i {
+                padding:15px 0px 15px 0px;
+
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .nav__list {
+            display: none;
+            .nav__list__link--booking {
+                background-color: white;
+                text-decoration: underline;
+            }
+
+            .nav__list {
+                display: block;
+
+                .nav__list__item {
+                    &:nth-child(even) {
+                        background-color: whitesmoke;
+                    }
+                    .nav__list__link {
+                    }
+                }
+            }
+
+            .nav__list__item {
+                .nav__list__link {
+                    display: block;
+                    padding:15px 0px 15px 0px;
+                    text-align: center;
+                }
+                &:nth-child(odd) {
+                    background-color: rgb(224, 224, 224);
+                }
+            }
+        }
+    }
+
+    @include media($tablet){
+        display: block;
+
+        .hamburger {
+            display: flex;
+            justify-content: center;
+            padding: 0px;
+            align-items: center;
+            i {
+                padding:15px 0px 15px 0px;
+
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .nav__list {
+            display: none;
+            .nav__list__link--booking {
+                background-color: white;
+                text-decoration: underline;
+            }
+
+            .nav__list {
+                display: block;
+
+                .nav__list__item {
+                    &:nth-child(even) {
+                        background-color: whitesmoke;
+                    }
+                    .nav__list__link {
+                    }
+                }
+            }
+
+            .nav__list__item {
+                .nav__list__link {
+                    display: block;
+                    padding:15px 0px 15px 0px;
+                    text-align: center;
+                }
+                &:nth-child(odd) {
+                    background-color: rgb(224, 224, 224);
+                }
+            }
+        }
+    }
+    
+    @include media($desktop){
+        display: none !important;
+        .hamburger {
+            display: none;
+        }
+        min-height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .nav__list {
+            display: flex;
+            align-items: center;
+            .nav__list__item {
+                .nav__list {
+                    display: flex;
+                    flex-direction: column;
+    
+
+                }
+                .nav__list__link {
+                    margin: 0px 15px;
+                }
+            }
+        }
+    }
+}
+
+.displayNone {
+    display: none;
+}
+
+.displayBlock {
+    display: block !important;
+}
+
+@include media($desktop){
+    
+    .nav__list {
+        min-height: 60px;
+
+
+        .nav__list__item {
+            // height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            &:hover .nav__list {
+                left: -10px !important;
+                top: 38px !important;
+                .nav__list__item {
+                    display: flex;
+                    flex-direction: column;
+                    .nav__list__link {
+                        background-color: white;
+                        padding:15px;
+                        min-width: 300px;
+                    }
+                }
+          
+                position: absolute;
+                top:38px;
+                .nav__list:before {
+                    visibility: hidden;
+                    position: relative;
+                    top: 0px;
+                    left:0px;
+                    width:100px;
+                    height: 100px;
+                }
+            }
+            .nav__list {
+                .nav__list__item {
+                    display: none;
+
+                    .nav__list__link {
+                        display: block;
+                    }
+                }
+            }
+            .nav__list__link {
+                margin: 0px 15px;
+            }
+        }
+    }
+}
+
+@include media($phone) {
+    .nav__list__link--booking {
+        display: none !important;
+    }
+}
+
+@include media($tablet) {
+    .nav__list__link--booking {
+        display: none !important;
+    }
+}

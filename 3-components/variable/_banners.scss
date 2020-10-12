@@ -1,0 +1,68 @@
+%banner {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-direction: column;
+
+    .banner__title {
+        color:white;
+        text-transform: uppercase;
+    }
+
+    @include media($phone){
+        text-align: center;
+        min-height: calc(40vh);
+
+        .banner__title {
+            font-size: 1.5em;
+        }
+    }
+    
+    @include media($tablet){
+        min-height: calc(50vh);
+        .banner__title {
+            font-size: 2em;
+        }
+    }
+    
+    @include media($desktop){
+        min-height: calc(60vh);
+        .banner__title {
+            font-size: 2.5em;
+        }
+    }
+}
+
+.banner--building {
+    @extend %banner;
+    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://www.unijan.com/wp-content/uploads/2020/02/Condo-Cleaning-Services.jpg');
+    background-size:cover;
+}
+
+.banner--corporate {
+    @extend %banner;
+    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/canstockphoto13926925.jpg');
+    background-size:cover;
+}
+
+.banner--office {
+    @extend %banner;
+    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/viking-corporate-office-08.jpg');
+    background-size: auto;
+    background-position: bottom;
+}
+
+.banner--construction {
+    @extend %banner;
+    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/Construction-Cleanup-G-Featured.jpeg');
+    background-size:cover;
+}
+
+// .banner {
+//     @extend %banner;
+//     background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://www.unijan.com/wp-content/uploads/2018/01/banner.jpg');
+ 
+// }

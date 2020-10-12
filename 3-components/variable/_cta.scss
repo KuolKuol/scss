@@ -1,0 +1,115 @@
+.cta {
+    padding:50px 0px;
+    .cta__container {
+        .cta__section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            line-height: 1.5em;
+            .cta__heading {
+                font-size: 2em;
+                margin-bottom:25px;
+                text-transform: uppercase;
+            }
+            .cta__paragraph {
+                margin-bottom:25px;
+                
+            }
+            .cta__subheading {
+                font-size: 1.8em;
+                margin-bottom:25px;
+                margin-top:25px;
+                text-transform: uppercase;
+
+            }
+            .cta__list {
+                margin-bottom:25px;
+                list-style-type: none;
+                .cta__list__item {
+                    &:before {
+                        content: '✓';
+                        padding-right:5px;
+                        color: green;
+                    }
+                }
+            }
+    
+            .cta__list__group {
+                display: flex;
+    
+                .cta__list {
+                    list-style-type: none;
+                    .cta__list__item {
+                        padding:0px 15px;
+                        &:before {
+                            content: '✓';
+                            color: green;
+                            padding-right:5px;
+                        }
+                    }
+                }
+            }
+        }
+        @include media($phone){
+            .cta__section {
+                .cta__heading {
+                    font-size: 1.8em;
+                    line-height: 2rem;
+                    text-align: center;
+                }
+                .cta__paragraph {
+                    text-align: center;
+
+                }
+                .cta__subheading {
+        
+                }
+                .cta__list {
+                    .cta__list__item {
+                        
+                    }
+                }
+            }
+        }
+    
+        @include media($tablet){
+            .cta__section {
+                .cta__heading {
+        
+                }
+                .cta__paragraph {
+        
+                }
+                .cta__subheading {
+        
+                }
+                .cta__list {
+                    .cta__list__item {
+                        
+                    }
+                }
+            }
+        }
+    
+        @include media($desktop){
+            .cta__section {
+                .cta__heading {
+        
+                }
+                .cta__paragraph {
+        
+                }
+                .cta__subheading {
+        
+                }
+                .cta__list {
+                    .cta__list__item {
+                        
+                    }
+                }
+            }
+        }
+    }
+    
+}

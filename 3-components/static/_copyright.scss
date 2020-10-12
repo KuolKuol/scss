@@ -1,0 +1,30 @@
+.copyright {
+    background-color: $mainColor;
+    min-height: 70px;
+    color: white;
+    display: flex;
+    align-items: center;
+
+    font-size: 0.8rem;
+
+    .container {
+        line-height: 1.5em;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .copyright__text a {
+            color: white;
+        }
+    }
+
+    @include media($phone){
+        text-align: center;
+        justify-content: center;
+
+        .container {
+            font-size: 0.8rem;
+        }
+    }
+}

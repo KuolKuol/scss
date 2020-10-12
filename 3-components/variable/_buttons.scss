@@ -1,0 +1,27 @@
+%button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border: solid 1px transparent;
+    border-radius: 4px;
+    
+
+}
+
+.notification-bar__button,.banner__button, .contact-form__button,.service-area__panel__button {
+    @extend %button;
+    color:black;
+    background-color: $secondaryColor;
+    padding: 0.5em 1em;
+    padding: 7px 30px;
+    min-width: 155px;
+}
+
+.hero__button{
+    @extend %button;
+    color:black;
+    background-color: $secondaryColor;
+    // padding:18px 32px;
+    padding:10px 30px;
+    max-width:188px;
+}
